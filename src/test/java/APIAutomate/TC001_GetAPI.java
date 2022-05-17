@@ -25,6 +25,8 @@ public class TC001_GetAPI {
 		String ResponseBody=response.getBody().asString();
 		System.out.println("Response Body Is "+ResponseBody);
 		
+		//validation
+		
 		String SuccessStatus=response.jsonPath().get("x.success");
 		Assert.assertEquals(SuccessStatus,"true");
 	}

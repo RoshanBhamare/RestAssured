@@ -25,7 +25,7 @@ public class TC005_GetAPI_SpecificAddress {
 		
 		String ResponseBody=response.getBody().asString();
 		System.out.println("Response Body Is "+ResponseBody);
-		//validate
+		//validation
 		String SuccessStatus=response.jsonPath().get("x.success");
 		Assert.assertEquals(SuccessStatus,"true");
 	}

@@ -24,7 +24,7 @@ public class TC006_DeleteAPI
 		
 		String ResponseBody=response.getBody().asString();
 		System.out.println("Response Body Is "+ResponseBody);
-		//Validate
+		//Validation
 		String SuccessStatus=response.jsonPath().get("x.success");
 		Assert.assertEquals(SuccessStatus,"false");
 	}

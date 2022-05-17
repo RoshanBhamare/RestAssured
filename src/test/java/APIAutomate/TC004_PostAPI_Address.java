@@ -35,7 +35,7 @@ public class TC004_PostAPI_Address
 		String ResponseBody=response.getBody().asString();
 		System.out.println("Response Body Is "+ResponseBody);
 		
-		//Validating 
+		//Validation
 		
 	String SuccessStatus=response.jsonPath().get("x.success");
 	Assert.assertEquals(SuccessStatus,"true");

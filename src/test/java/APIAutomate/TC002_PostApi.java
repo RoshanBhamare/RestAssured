@@ -34,7 +34,7 @@ public class TC002_PostApi
 		String ResponseBody=response.getBody().asString();
 		System.out.println("Response Body Is "+ResponseBody);
 		
-		//Validating 
+		//Validation
 		
 	String SuccessStatus=response.jsonPath().get("username");
 	Assert.assertEquals(SuccessStatus,"voereir-test0712");
