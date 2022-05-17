@@ -13,7 +13,7 @@ public class TC006_DeleteAPI
 	@Test
 	void getApiAutomate()
 	{
-		//Base Uri
+		//Base url 
 		RestAssured.baseURI = "http://193.93.248.235:5001";
 		// Request Object
 		RequestSpecification Request = RestAssured.given();
@@ -24,7 +24,7 @@ public class TC006_DeleteAPI
 		
 		String ResponseBody=response.getBody().asString();
 		System.out.println("Response Body Is "+ResponseBody);
-		
+		//Validate
 		String SuccessStatus=response.jsonPath().get("x.success");
 		Assert.assertEquals(SuccessStatus,"false");
 	}
